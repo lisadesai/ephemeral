@@ -17,7 +17,7 @@ def get_date():
    dt_yest = dt - timedelta(days=1)
    formatted_dt = dt.strftime("%H:%M %d/%m/%Y %z")
    formatted_dt_y = dt_yest.strftime("%H:%M %d/%m/%Y %z")
-   formatted_dt = "12:00 01/04/2025 -05:00"  
+   formatted_dt = "12:00 20/05/2025 -05:00"  
 
    formatted_dt = formatted_dt[:-2] + ":" + formatted_dt[-2:]
    formatted_dt_y = formatted_dt_y[:-2] + ":" + formatted_dt_y[-2:]
@@ -65,10 +65,12 @@ def get_planet_info():
       if i == "Rahu" or i=="Ketu":
          flag = "stays Retrograde"
 
-      print("current sign: " + current_sign + " for planet: " + i)
-      print("yesterday's sign: " +  yest_sign + " for planet: " + i)
+      print("CURRENT sign: " + current_sign + " for planet: " + i)
+      print("Yesterday's sign: " +  yest_sign + " for planet: " + i)
       print("This planet's directional motion "+ flag)
       print("\n")
+      if i == "Jupiter":
+         print(today_data)
 
 
 #Get retro info
