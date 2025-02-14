@@ -1,12 +1,10 @@
 import sys
 import os
 import json
-import vedastro  
 from datetime import datetime, timezone, timedelta
 venv_path = os.path.abspath("venv/lib/python3.10/site-packages")  
-
-if venv_path not in sys.path:
-    sys.path.insert(0, venv_path)  
+sys.path.insert(0, venv_path)  
+import vedastro import calculate
 
 #Get today's date and time. Location can be prime meridian meets equator.
 def get_date():
